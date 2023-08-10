@@ -1,0 +1,249 @@
+/********************************************************
+                 PROJECTS PAGE 
+  - used in the following pages
+  graphicdesign , appdesign, graphicdesign and homepage
+  - mainly used in the image containers with the links to
+  the 3 pages
+  ******************************************************/
+.projects {
+  width: 100%;
+  margin: auto;
+  padding-top: 120px;
+  /* background-image: url("../assets/shared/desktop/icon-right-arrow.svg"); */
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  row-gap: 24px;
+}
+.project {
+  position: relative;
+  flex-grow: 1;
+  border-radius: 15px;
+}
+
+.project__summary {
+  padding: 9.5px 2.5px;
+  position: absolute;
+  z-index: 10;
+  top: 35%;
+  left: 15%;
+  color: var(--pri-color-white);
+}
+
+.project_img {
+  display: block;
+  width: 100%;
+  margin: auto;
+ height: 250px;
+  border-radius: 15px;
+}
+.project__summary__title {
+  font-size: 1.75rem;
+  line-height: 36px;
+  letter-spacing: 1.4px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.project__btn {
+  color: var(--pri-color-white);
+  letter-spacing: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+}
+.project__btn__img {
+  margin-left: 16px;
+}
+
+/* ----------------------------------------------------------------------
+      ADDITIONALINFO COMPONENT
+      contains information generally short descriptions of
+      purpose of the work that we do (app, web and graphic designs
+
+      ------------------------------------------------------------------- */
+
+.additionalInfo {
+  padding-top: 120px;
+  width: 87.2%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+ /* flex-direction: column;
+  flex-wrap: nowrap; */
+  row-gap: 80px;
+  padding-bottom: 300.5px;
+}
+.additionalInfo h3 {
+  font-size: 1.25rem;
+  font-family: "Jost", sans-serif;
+  line-height: 26px;
+  letter-spacing: 5px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.additionalInfo p {
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 26px;
+  font-weight: 400;
+  text-align: center;
+  color: var(--sec-color-dkgrey);
+}
+.additionalInfo figcaption {
+  margin-top: 48px;
+}
+.additionalInfo__img {
+  background-image: url("../assets/shared/desktop/bg-pattern-small-circle.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  margin: auto;
+}
+/*active states */
+.project_img:hover {
+	background-color: var(--pri-color-peach);
+  cursor: pointer;
+  opacity: 0.5;
+}
+.project:hover {
+  background-color: var(--pri-color-peach);
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 720px) {
+  .main__container {
+    width: 89.8%;
+    margin: auto;
+  }
+  .project_img {
+    height: 308px;
+    width: 100%;
+  }
+  .projects {
+    padding-top: 122px;
+    width: 100%;
+  }
+  .project__summary {
+    left: 36%;
+  }
+  .project__summary__title {
+    font-size: 2.25rem;
+    line-height: 48px;
+    letter-spacing: 2px;
+  }
+  .project__btn {
+    font-size: 0.9375rem;
+  }
+  .additionalInfo {
+    width: 89.9%;
+    row-gap: 32px;
+    padding-bottom: 328.5px;
+  }
+
+  .additionalInfo figure {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .additionalInfo figcaption {
+    text-align: left;
+    width: 63.6%;
+    margin-top: 0;
+  }
+  .additionalInfo h3 {
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .mainSection {
+    position: relative;
+    margin-top: 40px;
+  }
+  .mainSection::after,
+  .mainSection::before {
+    position: absolute;
+    content: "";
+    width: 75%;
+    height: 500px;
+    background-image: url("../assets/shared/desktop/bg-pattern-leaf.svg");
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  .main__container {
+    width: 81.8%;
+  }
+  .mainSection::after {
+    top: -20%;
+    left: 0;
+    background-size: 100% 110%;
+  }
+  .mainSection::before {
+    bottom: 8%;
+    right: 0px;
+    background-size: 100% 100%;
+    transform: rotate(180deg);
+  }
+ 
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 94.4%;
+    gap: 24px;
+  }
+  .webdesign {
+    grid-area: 1/1/3/1;
+  }
+  .project_img {
+    width: 100%;
+  }
+  .project__summary {
+    left: 30%;
+  }
+  .appdesign .project_img,
+  .graphicdesign .project_img {
+    height: 308px;
+  }
+  .webdesign .project_img {
+    min-height: 100%;
+    height: 640px;
+    object-fit: cover;
+  }
+  .additionalInfo {
+    padding-bottom: 380px;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+  }
+  .additional__info__home {
+    padding-top: 155px;
+    width: 80%;
+  }
+  .additionalInfo__web {
+    padding-bottom: 0;
+  }
+
+  .additionalInfo figure {
+    flex-direction: column;
+    /* justify-content: inherit; */
+    align-items: center;
+    gap: 40px;
+  }
+  .additionalInfo p,
+  .additionalInfo h3 {
+    text-align: center;
+  }
+  .additionalInfo h3 {    
+    margin-bottom: 40px;    
+  }
+  .additionalInfo figcaption {
+    width: 90%;
+  }
+}

@@ -1,0 +1,139 @@
+.hero__contact {
+  margin-bottom: 100px;
+}
+.countrycard__contact {
+  margin-bottom: 200px;
+}
+.countrycard__contact .additionalInfo__title {
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+form {
+  width: 87.2%;
+  margin: auto;
+}
+.form__inputs {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  row-gap: 25px;
+}
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.errorMsg {
+  position: absolute;
+  right: 0;
+  line-height: 26px;
+  top: 10px;
+  color: var(--pri-color-white);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  visibility: hidden;
+}
+input,
+textarea {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  background-color: inherit;
+  color: var(--pri-color-white);
+  font-size: 0.94rem;
+  line-height: 26px;
+  font-weight: 500;
+  padding: 10px 12px;
+}
+input::placeholder,
+textarea::placeholder {
+  color: white;
+}
+.hero__contact .hero__web {
+  padding-bottom: 12px;
+  padding-top: 65px;
+}
+.hero__container .hero__summary {
+  margin-bottom: 0px;
+}
+.btn__ctrl {
+  text-align: center;
+  padding-bottom: 80px;
+  padding-top: 40px;
+}
+/***********************************
+active and error states 
+***********************************/
+.errorMsgShow {
+  visibility: visible;
+}
+input:hover {
+  cursor: pointer;
+}
+.filledInput {
+  border-bottom: 3px solid white;
+}
+/***********************************
+ END - active and error states 
+***********************************/
+@media screen and (min-width: 720px) {
+  .btn__ctrl {
+    text-align: right;
+    padding-top: 0;
+  }
+  .hero__contact .hero__title,
+  .hero__contact .hero__summary {
+    text-align: left;
+    margin-left: 0;
+    width: 100%;
+  }
+  .hero__contact .hero__web {
+    padding-bottom: 0px;
+  }
+  .hero__contact {
+    margin-bottom: 112px;
+  }
+  .form__container {
+    margin-top: 35px;
+  }
+  input,
+  textarea {
+    padding: 12px 12px;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .form__container {
+    width: 45%;
+    padding-top: 42px;
+  }
+  .hero__contact .hero__web {
+    width: 51%;
+  }
+
+  .btn__ctrl {
+    padding-bottom: 52px;
+  }
+
+  .hero__contact .hero__summary {
+    margin-left: 60px;
+    width: 80%;
+  }
+  .countrycard__contact .countryCard {
+    position: relative;
+  }
+  .countrycard__contact .countryCard::before {
+    position: absolute;
+    content: "";
+    background-image: url("../assets/shared/desktop/bg-pattern-leaf.svg");
+    background-repeat: no-repeat;
+    z-index: -1;
+    height: 468px;
+    width: 80%;
+    right: -150px;
+    top: 120px;
+  }
+}

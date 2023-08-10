@@ -1,0 +1,169 @@
+/************************************
+Button component
+******************************** */
+.btn__component {
+  font-size: 0.9375rem;
+  padding: 19px 28.5px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  background-color: var(--pri-color-white);
+  border: none;
+  border-radius: 8px;
+  width: 152px;
+  margin-top: 24px;
+/************************************
+    End of Button component
+******************************** */
+}
+/*heading section, webdesign*/
+.hero__web {
+  padding-bottom: 80px;
+  padding-top: 100px;
+}
+.hero__web .hero__summary {
+  margin-bottom: 30px;
+}
+.hero__containerWeb {
+  background-size: 253%;
+  background-position: 45% 0%;
+  background-image: url("../assets/shared/desktop/bg-pattern-call-to-action.svg");
+}
+
+/***************************************
+main section -  webdesign, appdesign and graphic design pages
+********************************************/
+.main__container {
+  width: 87.2%;
+  margin: auto;
+}
+.additionalInfo__img__designs {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 15px 15px 0 0;
+  height: 320px;
+  object-fit: cover;
+}
+.additionalInfo__title {
+  font-size: 1.25rem;
+  padding-top: 32px;
+  letter-spacing: 5px;
+  line-height: 26px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: var(--pri-color-peach);
+}
+.additionalInfo__container {
+  background-color: #fdf3f0;
+  text-align: center;
+  border-radius: 0 0 15px 15px;
+}
+.additionalInfo__desc {
+  font-size: 1rem;
+  line-height: 26px;
+  width: 82%;
+  text-align: center;
+  margin: auto;
+  padding-bottom: 32px;
+}
+.countryCard .additionalInfo__title {  
+  margin-bottom: 50px;  
+  text-transform: uppercase;
+}
+.mainSectionWeb .additionalInfo__web {
+  width: 100%;
+  padding-top: 94px;
+  padding-bottom: 0px;
+ /* flex-direction: row;
+  flex-wrap: wrap; */
+  gap: 40px 20px;
+  justify-content: start;
+}
+.mainSectionWeb {
+  padding-bottom: 300px;
+}
+
+.infoCard {
+  width: min(350px, 100%);
+  margin: auto;
+}
+.projects__web {
+  padding-top: 100px;
+  width: 100%;
+}
+/****************************************
+ active states
+ *************************************** */
+.mainSectionWeb .additionalInfo__container:hover {
+  background-color: var(--pri-color-peach);	
+  cursor: pointer;
+}
+.mainSectionWeb .additionalInfo__container:hover h2,
+.mainSectionWeb .additionalInfo__container:hover p {
+	color: var(--pri-color-white);
+}
+
+/* *********************************
+ANIMATION
+*************************************/
+.animate_me {
+  animation-name: slideInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+/********************************************************
+END ANIMATION
+***********************************************************/
+@media screen and (min-width: 720px) and (max-width: 850px) {
+  .infoCard {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+  }
+  .additionalInfo__img__designs {
+    width: 46.5%;
+    border-radius: 15px 0 0 15px;
+    height: 310px;
+  }
+  .additionalInfo__container {
+    border-radius: 0 15px 15px 0;
+  }
+  .infoCard .additionalInfo__title {
+    margin-top: 20%;
+  }
+  .projects__web {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .hero__containerWeb {
+    background-image: url("../assets/shared/desktop/bg-pattern-call-to-action.svg");
+    background-size: 120%;
+    background-position: 0% 50%;
+  }
+  .mainSectionWeb .additionalInfo__web {
+    padding-bottom: 0px;
+  }
+
+}
+@media screen and (min-width: 1120px) {
+  .btn__component {
+    margin-left: 60px;
+  }
+  .mainSection.mainSectionWeb::before {
+    height: 0;
+  }
+  
+}

@@ -1,0 +1,108 @@
+.locations__map {
+  padding-bottom: 268px;
+}
+.hero__location .title {
+  margin-top: 17px;
+  font-size: 2rem;
+  color: var(--pri-color-peach);
+  line-height: 32px;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+.address {
+  font-family: "Jost", sans-serif;
+  font-size: 0.94rem;
+  line-height: 25px;
+}
+.address .subtitle {
+  font-weight: 600;
+}
+.hero__container__about .hero__location {
+  padding-top: 60px;
+  margin-bottom: 37px;
+}
+.location__address.address1 {
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 720px) {
+  .hero__container .hero__location {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+  }
+  .hero__location__spacer {
+  }
+  .hero__location__spacer {
+    background: white;
+    gap: 40px;
+    margin-top: 0;
+    margin-bottom: 100px;
+  }
+  .hero__container .hero__location {
+    width: 100%;
+    background-color: #fdf3f0;
+    border-radius: 15px;
+  }
+  .hero__location__spacer .hero_image_about img {
+    border-radius: 15px;
+  }
+  .hero_image_location {
+    margin-bottom: 31px;
+  }
+  .hero__location .title {
+    grid-area: 1/1/1/3;
+    justify-self: baseline;
+    margin-left: 75px;
+    font-size: 3rem;
+    line-height: 48px;
+    /* row-gap: 40px; */
+    margin-top: 17px;
+  }
+  .hero_image_location img {
+    height: 326px;
+  }
+  .location__address {
+    text-align: left;
+  }
+  .location__address.address1 {
+    text-align: left;
+    margin-left: 75px;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .hero__location__spacer {
+    flex-direction: row-reverse;
+    margin-bottom: 30px;
+  }
+  .locations__map .hero__container:nth-child(2) {
+    flex-direction: row;
+  }
+  .hero_image_location {
+    width: 48%;
+    margin-bottom: 0;
+  }
+  .hero__container .hero__location {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 58px;
+  }
+  .hero__location .title {
+    margin-top: 28px;
+    font-size: 2.5rem;
+    margin-bottom: 0;
+  }
+  .hero__location__spacer .hero_image_about img {   
+    height: 100%;
+  }
+  /*
+  remove pseudo elements on this page
+  */
+  .locations__map .hero__container__about__main::after,
+  .locations__map .hero__container__about__main::before {   
+    width: 0%;
+    height: 0px; 
+    background-image: none;   
+  }
+}

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&display=swap');
+@import './reset';
+:root {
+ --pri-color-peach: #E78168;
+ --pri-color-black: #1D1C1E;
+ --pri-color-white: #FFFFFF;
+ /*SECONDARY COLORS*/
+ --sec-color-ltpeach: #FFAD9B;
+ --sec-color-dkgrey: #333136;
+ --sec-color-ltgrey: #F1F3F5;
+}
+body {
+  font-family: 'Jost', sans-serif;
+  font-size: 16px;
+}
+@media screen and (min-width: 1650px) {
+  #root {
+      width: 95%;
+      max-width: 1490px;
+      margin: 0 auto;
+  }
+  .modal {        
+      right: -60%;
+      position: relative;
+      top: -123px;
+  }
+}
+

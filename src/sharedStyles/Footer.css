@@ -1,0 +1,236 @@
+/*
+HOME FOOTER section 
+*/
+.footer {
+  background-color: var(--pri-color-black);
+  color: var(--pri-color-white);
+  position: relative;
+}
+aside {
+  background-color: var(--pri-color-peach);
+  width: 87.2%;
+  margin: auto;
+  position: relative;
+  top: -195px;
+  border-radius: 15px;
+  background-image: url("../assets/shared/desktop/bg-pattern-call-to-action.svg");
+  background-repeat: no-repeat;
+  background-size: 220%;
+  background-position: 39% 36%;
+  padding-bottom: 64px;
+}
+.aside__container {
+  width: 85.4%;
+  margin: auto;
+  padding-top: 64px;
+}
+.aside__title {
+  font-size: 2rem;
+  line-height: 36px;
+  font-weight: 500;
+  padding-bottom: 10px;
+  margin-bottom: 6px;
+  text-align: center;
+}
+.aside__summary {
+  font-size: 0.9rem;
+  line-height: 25px;
+  text-align: center;
+}
+.aside__btn {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background-color: var(--pri-color-white);
+  padding: 17.5px 30.5px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  margin: 36px auto 0;
+  display: block;
+}
+.mainFooter {
+  width: 87.2%;
+  margin: -114px auto auto;
+  padding-bottom: 60px;
+}
+.footer__contact {
+  padding-top: 190px;
+}
+
+.footerLogo__container {
+  position: relative;
+}
+.footerLogo__container::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #979797;
+  top: 50px;
+}
+.footerLogo {
+  filter: invert(100%) hue-rotate(171deg) brightness(100%);
+  width: 62%;
+  display: block;
+  margin: auto;
+}
+.footer__menuList {
+  width: 87.2%;
+  margin: auto;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  grid-row-gap: 32px;
+  row-gap: 32px;
+  padding-bottom: 40px;
+}
+.footer__menuList li {
+  text-align: center;
+}
+.footer__menuList a {
+  font-size: 0.875rem;
+  color: var(--pri-color-white);
+  line-height: 14px;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+.address {
+  font-size: 1rem;
+  line-height: 26px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 56.5%;
+  margin: auto;
+}
+
+.socials img {
+  display: block;
+  margin: auto;
+}
+ /* active states */
+ .aside__btn:hover {
+  background-color: var(--sec-color-ltpeach);
+  color: var(--pri-color-white);
+  cursor: pointer;
+}
+.socials img:hover {	
+	filter: brightness(30%) contrast(40%);
+}
+
+
+@media screen and (min-width: 720px) {
+  aside {
+    background-size: 156%;
+    top: -255px;
+  }
+  .aside__title {
+    font-size: 2.5rem;
+    line-height: 40px;
+    width: 58.5%;
+    margin: auto;
+  }
+  .aside__summary {
+    font-size: 1rem;
+    line-height: 26px;
+    width: 75%;
+    margin: auto;
+  }
+  .aside__btn {
+    padding: 19.5px 32.5px;
+    margin-bottom: 0 /*60px*/;
+  }
+  .aside__container {
+    width: 85.7%;
+    padding-top: 55px;
+  }
+  .mainFooter {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: -154px auto auto;
+  }
+  .mainFooter::before {
+    width: 100%;
+    top: 38px;
+    left: 21px;
+  }
+  .footerLogo__container::before {
+    width: 300%;
+  }
+  .footer__menu {
+    grid-area: 1/2/1/4;
+  }
+  .footer__menuList {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-top: 0;
+  }
+  .socials {
+    justify-content: space-between;
+    width: 82.5%;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .aside__container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 88.5%;
+    padding-bottom: 25px;
+    padding-top: 68px;
+  }
+  .aside__summary {
+    grid-area: 2/1/2/1;
+    text-align: left;
+    margin-left: 30px;
+    width: 70%;
+  }
+  .aside__btn {
+    width: 165px;
+    grid-area: 1/2/2/3;
+  }
+  .aside__title {
+    text-align: left;
+    margin-left: 33px;
+    width: 50%;
+  }
+  aside {
+    top: -215px;
+    width: 77.2%;
+    margin: auto;
+    padding-bottom: 15px;
+  }
+  .mainFooter {
+    width: 77.2%;
+    margin: -115px auto auto;
+    row-gap: 32px;
+  }
+  .mainFooter::before {
+    width: 98%;
+    top: 55px;
+  }
+  .footerLogo {
+    margin-left: 0;
+  }
+  .footer__menuList,
+  .socials {
+    margin-right: 0;
+  }
+  .footer__menuList {
+    width: 50%;
+  }
+  .address1 {
+    justify-self: baseline;
+  }
+  .address {
+    text-align: left;
+  }
+}
